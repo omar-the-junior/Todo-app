@@ -1,0 +1,51 @@
+.checkbox {
+  cursor: pointer;
+  position: relative;
+
+  input {
+    display: none;
+
+    &:checked + span {
+      background-image: var(--checkbox-gradient);
+      border: none;
+      .checkmark {
+        opacity: 1;
+      }
+    }
+  }
+
+  span {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50%;
+    border: solid 1px var(--secondary-text-color-light);
+
+    .checkmark {
+      position: absolute;
+      top: 54%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.1s linear;
+    }
+  }
+
+  &--filter {
+    input {
+      &:checked + p {
+        color: var(--bright-blue);
+      }
+    }
+
+    &:hover p {
+      color: var(--text-hover);
+    }
+    p {
+      transition: color 0.1s linear;
+      font-weight: 700;
+    }
+  }
+}

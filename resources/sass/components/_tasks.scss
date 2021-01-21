@@ -1,0 +1,35 @@
+.task {
+  border-bottom: var(--secondary-text-color-light) solid 1px;
+
+  & * {
+    cursor: pointer;
+  }
+  &:hover {
+    .cross-icon {
+      opacity: 1;
+    }
+  }
+
+  &__input {
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+
+  .cross-icon {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+
+  @media screen and (max-width: 800px) {
+    .cross-icon {
+      opacity: 1;
+    }
+  }
+}
+
+[status="completed"] {
+  p {
+    text-decoration: line-through;
+    color: var(--secondary-text-color-light);
+  }
+}

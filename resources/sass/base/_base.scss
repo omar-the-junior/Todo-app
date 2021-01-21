@@ -1,0 +1,136 @@
+:root {
+  --checkbox-gradient: linear-gradient(
+    to bottom right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  --bright-blue: hsl(220, 98%, 61%);
+
+  /* ---------------------- LIGHT THEME COLORS---------------------- */
+  --header-image-location: url("../images/bg-desktop-light.jpg");
+  --main-background-color: hsl(236, 33%, 92%);
+  --box-background-color: hsl(0, 0%, 98%);
+  --secondary-text-color-light: hsl(233, 11%, 84%);
+  --secondary-text-color: hsl(236, 9%, 61%);
+  --primary-text-color: hsl(235, 19%, 35%);
+  --text-hover: hsl(235, 19%, 35%);
+
+  @media screen and (max-width: 450px) {
+    --header-image-location: url("../images/bg-desktop-light.jpg");
+  }
+}
+
+[theme="dark"] {
+  /* ---------------------- DARK THEME COLORS---------------------- */
+  --header-image-location: url("../images/bg-desktop-dark.jpg");
+  --main-background-color: hsl(235, 21%, 11%);
+  --box-background-color: hsl(235, 24%, 19%);
+  --primary-text-color: hsl(234, 39%, 85%);
+  --text-hover: hsl(236, 33%, 92%);
+  --secondary-text-color: hsl(234, 11%, 52%);
+  --secondary-text-color-light: hsl(237, 14%, 26%);
+
+  @media screen and (max-width: 450px) {
+    --header-image-location: url("../images/bg-desktop-dark.jpg");
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 450px) {
+    font-size: 8px;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 7px;
+  }
+}
+
+body {
+  background-color: var(--main-background-color);
+}
+
+header {
+  background-image: var(--header-image-location);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+}
+
+main {
+  width: 80rem;
+  max-width: 100%;
+  margin: -20vh auto;
+  padding: 0 10rem;
+
+  @media screen and (max-width: 700px) {
+    padding: 0 5rem;
+  }
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+#theme-switch {
+  cursor: pointer;
+}
+
+#clear-completed {
+  cursor: pointer;
+  &:hover {
+    color: var(--text-hover);
+  }
+}
+
+.error {
+  position: absolute;
+  top: -5rem;
+  color: rgb(148, 7, 7);
+  width: 100%;
+  text-align: center;
+  right: 0;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__space-between {
+    justify-content: space-between;
+  }
+}
+
+.flex-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./resources/images/favicon-32x32.png">
+  <title>Todo app</title>
+  <link rel="stylesheet" href="./resources/css/style.css">
+  <script src="./resources/javascript/script.js" defer></script>
+</head>
+
+<body theme="light">
+  <header></header>
+  <main>
+    <section>
+      <div class="content__top flex-row flex-row__space-between">
+        <h1>Todo</h1>
+        <img id="theme-switch" src="./resources/images/icon-moon.svg" alt="Theme icon">
+      </div>
+
+      <div class="content__main">
+        <div class="task__input box box__container flex-row">
+          <label class="checkbox">
+            <input type="checkbox" name="" id="checkbox">
+            <span>
+              <img class="checkmark" src="./resources/images/icon-check.svg" alt="Check mark">
+            </span>
+          </label>
+
+          <input id="task-input" placeholder="Create a new todo...." class="text-box" type="text">
+        </div>
+
+        <div class="box__container">
+          <ul class="task__container">
+            <li class="task box flex-row" status="active">
+              <label class="checkbox">
+                <input type="checkbox" name="" id="checkbox">
+                <span>
+                  <img class="checkmark" src="./resources/images/icon-check.svg" alt="Check mark">
+                </span>
+              </label>
+              <p class="text-box">Wake up at 6am 🌄</p>
+              <img class="cross-icon" src="./resources/images/icon-cross.svg" alt="Cross icon">
+            </li>
+            <li class="task box flex-row" status="active">
+              <label class="checkbox">
+                <input type="checkbox" name="" id="checkbox">
+                <span>
+                  <img class="checkmark" src="./resources/images/icon-check.svg" alt="Check mark">
+                </span>
+              </label>
+              <p class="text-box">Start coding</p>
+              <img class="cross-icon" src="./resources/images/icon-cross.svg" alt="Cross icon">
+            </li>
+            <li class="task box flex-row" status="active">
+              <label class="checkbox">
+                <input type="checkbox" name="" id="checkbox">
+                <span>
+                  <img class="checkmark" src="./resources/images/icon-check.svg" alt="Check mark">
+                </span>
+              </label>
+              <p class="text-box">Go outside</p>
+              <img class="cross-icon" src="./resources/images/icon-cross.svg" alt="Cross icon">
+            </li>
+            <li class="task box flex-row" status="active">
+              <label class="checkbox">
+                <input type="checkbox" name="" id="checkbox">
+                <span>
+                  <img class="checkmark" src="./resources/images/icon-check.svg" alt="Check mark">
+                </span>
+              </label>
+              <p class="text-box">Increase your knowlege about JavaScript</p>
+              <img class="cross-icon" src="./resources/images/icon-cross.svg" alt="Cross icon">
+            </li>
+            <li class="task box flex-row" status="active">
+              <label class="checkbox">
+                <input type="checkbox" name="" id="checkbox">
+                <span>
+                  <img class="checkmark" src="./resources/images/icon-check.svg" alt="Check mark">
+                </span>
+              </label>
+              <p class="text-box">Read for 1 hour 📖</p>
+              <img class="cross-icon" src="./resources/images/icon-cross.svg" alt="Cross icon">
+            </li>
+
+          </ul>
+
+          <div class="content__controls box flex-row flex-row__space-between">
+            <p id="task-count">{NUMB} items left</p>
+
+            <div class="flex-row filter-container">
+              <label class="checkbox checkbox--filter">
+                <input checked type="radio" name="filter" value="display-all">
+                <p>All</p>
+              </label>
+              <label class="checkbox checkbox--filter">
+                <input type="radio" name="filter" value="display-active">
+                <p>Active</p>
+              </label>
+              <label class="checkbox checkbox--filter">
+                <input type="radio" name="filter" value="display-completed">
+                <p>Completed</p>
+              </label>
+            </div>
+
+            <span id="clear-completed">Clear Completed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drag and drop to reorder list -->
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Omar-JR">Omar Junior</a>.
+    </div>
+  </main>
+
+</body>
+
+</html>

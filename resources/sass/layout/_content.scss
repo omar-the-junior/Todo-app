@@ -1,0 +1,29 @@
+.content {
+  &__top {
+    margin-bottom: 3rem;
+  }
+
+  &__controls {
+    color: var(--secondary-text-color);
+    .filter-container {
+      label:not(:first-child) {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    &__controls {
+      position: relative;
+      .filter-container {
+        position: absolute;
+        right: 0;
+        bottom: -8rem;
+        width: 100%;
+        background-color: var(--box-background-color);
+        padding: inherit;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
