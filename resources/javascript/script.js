@@ -187,26 +187,26 @@ function applyFilter() {
 };
 
 
-taskInput.addEventListener('keyup', e => {
-    if (e.code === 'Enter') {
-        if (taskInput.value === '') {
-            const errText = `Can't add an empty task 😑`
-            const err = document.createElement('p');
-            err.classList.add('error')
-            err.textContent = errText;
-            taskInput.parentElement.appendChild(err);
-            setTimeout(() => {
-                err.remove();
-            }, 3500);
-        } else {
-            createTask();
-            addEventListenerToAllDeleteBtns();
-            convertParagraphToTextBox();
-            completeTask();
-            countTasks();
-            applyFilter();
-        }
+taskInput.addEventListener('change', () => {
+
+    if (taskInput.value === '') {
+        const errText = `Can't add an empty task 😑`
+        const err = document.createElement('p');
+        err.classList.add('error')
+        err.textContent = errText;
+        taskInput.parentElement.appendChild(err);
+        setTimeout(() => {
+            err.remove();
+        }, 3500);
+    } else {
+        createTask();
+        addEventListenerToAllDeleteBtns();
+        convertParagraphToTextBox();
+        completeTask();
+        countTasks();
+        applyFilter();
     }
+
 });
 
 filterControls.forEach(filter => {
